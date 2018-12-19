@@ -5,8 +5,8 @@ Do demographics make prediction better?
 * Plots - plotting scripts
 * Processing_Scripts - exploration and preprocessing the data
 * Helper code -
- * split data into proportions: split_data.ipynb (was needed for earlier experiments)
- * distance between datasets: Distance metric.ipynb (variance along the features used for the finding the distance)
+ ** split data into proportions: split_data.ipynb (was needed for earlier experiments)
+ ** distance between datasets: Distance metric.ipynb (variance along the features used for the finding the distance)
  * combine pairs of symptoms: Combine Symptoms.ipynb
  * combine the demographics with the symptoms: Combine demographics with symptoms.ipynb
  * Split the data into train and test split: split_train_test.ipynb
