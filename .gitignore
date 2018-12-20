@@ -1,0 +1,4 @@
+*.DS_Store
+*.pyc
+*.ipnyb_checkpoints/*
+*-checkpoint.ipynb
