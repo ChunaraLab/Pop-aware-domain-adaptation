@@ -54,7 +54,7 @@ def get_influence(config,name_,parents_):
 def get_all_configurations():
     #get the configurations from the configuration file
     config = configparser.ConfigParser()
-    config.read("./Age_Gender_Hyperparameters/with_demographics_hongkong.ini")
+    config.read("./Gender_Hyperparameters/with_demographics_hutterite.ini")
     print("Read the configuration file!")
 
     method = ast.literal_eval(config.get("general","method"))
@@ -154,7 +154,7 @@ def function_to_minimize(x,*args):
 # parameters = dict(list(data_parameters.items()) + list(parent_parameters.items()))
 # x = joint_objective(datasets_,parameters,symptoms,alpha,levels,influence,parents,divergence_function)
 
-result = minimize(function_to_minimize,x0 = np.asarray(x),method=method,tol = 1e-6,args = args,options={'maxfev':10**3, 'disp': True})
+result = minimize(function_to_minimize,x0 = np.asarray(x),method=method,tol = 1e-6,args = args,options={'maxfev':10**5, 'disp': True})
 print(result)
 
 parameters_final = get_parameters(symptoms,parameter_names,result.x)

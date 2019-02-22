@@ -25,6 +25,7 @@ influence = defaultdict()
 #configparser to read the configurations for the experiment
 def get_dataset_parameters(config,name_,files_):
     for i in files_:
+        print(i)
         i = i[:-4]
         data_parameters[i] = list(map(float,ast.literal_eval(config.get(name_,i))))
     return data_parameters
@@ -116,6 +117,7 @@ directory_to_store = "./Test/"
 #get all the datasets
 #this is a dictionary : dataset name as the key and the dataframe as the value
 datasets_ = get_data(directory,datasets_,files_)
+
 #positive data is similar to datasets_ but only includes the positive data points in each dataset
 positive_data = prepare_data(datasets_,positive_data)
 
@@ -153,7 +155,7 @@ def function_to_minimize(x,*args):
     return joint_objective(datasets_,parameters,symptoms,alpha,levels,influence,parents,divergence_function)
 
 
-result = minimize(function_to_minimize,x0 = np.asarray(x),method=method,args = args,options={'maxfev':10**3, 'disp': True,'fatol' : 1e-2})
+result = minimize(function_to_minimize,x0 = np.asarray(x),method=method,args = args,options={'maxfev':10**5, 'disp': True,'fatol' : 1e-2})
 print(result)
 
 parameters_final = get_parameters(symptoms,parameter_names,result.x)
