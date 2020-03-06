@@ -4,7 +4,7 @@ This repository contains information and code from the paper Population-aware Hi
 
 Please refer to [requirements.txt](./requirements.txt) for required packages.
 
-Paper can be found at [https://arxiv.org/abs/1908.09222](https://arxiv.org/abs/1908.09222_)
+Paper can be found at [https://arxiv.org/abs/1908.09222](https://arxiv.org/abs/1908.09222)
 
 
 
